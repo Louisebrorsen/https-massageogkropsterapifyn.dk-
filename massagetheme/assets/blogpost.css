@@ -1,0 +1,85 @@
+/* archive-blogpost */
+
+.blog-archive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  margin: auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1400px;
+  margin: 3rem auto;
+  align-items: stretch;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-card .btn-cta {
+  margin: 0;
+}
+
+.blog-card img {
+  align-self: center;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card h2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4em;
+  color: #000;
+}
+
+.blog-card:hover h2 {
+  color: #000; /* tving farven ved hover */
+}
+
+.blog-card p {
+  min-height: 6em;
+  display: flex;
+  align-items: center;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
